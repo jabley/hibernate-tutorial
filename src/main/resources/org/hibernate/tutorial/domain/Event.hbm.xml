@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.hibernate.tutorial.domain">
+
+    <class name="Event" table="EVENTS">
+        <id name="id" column="EVENT_ID">
+            <generator class="native"/>
+        </id>
+        <property name="systemCalendarTimestamp" type="calendar" column="SYS_CALENDAR_TS" />
+        <property name="utcCalendarTimestamp" type="calendar" column="UTC_CALENDAR_TS" />
+        <property name="systemDateDatetime" type="timestamp" column="SYSTEM_DATE_DT"/>
+        <property name="utcDateDatetime" type="timestamp" column="UTC_DATE_DT" />
+        
+        <property name="title"/>
+    </class>
+
+</hibernate-mapping>
